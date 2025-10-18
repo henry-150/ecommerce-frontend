@@ -1,0 +1,150 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-desktop ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-desktop li {
+    margin-left: 1.5rem;
+}
+
+.nav-desktop a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+}
+
+.search-bar input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.search-bar button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.cart a {
+    position: relative;
+    display: inline-block;
+}
+
+.cart img {
+    width: 24px;
+    height: 24px;
+}
+
+.cart-notification {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.8rem;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+.nav-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-desktop {
+        display: none;
+    }
+
+    .header-right .search-bar {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-mobile {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid #ddd;
+    }
+
+    .nav-mobile.active {
+        display: flex;
+    }
+
+    .nav-mobile ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .nav-mobile li {
+        text-align: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .nav-mobile a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+}
